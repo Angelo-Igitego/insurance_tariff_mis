@@ -1,0 +1,40 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Insurance providers</h1>
+
+
+<div id="insurance_providers" class="table">
+  <table>
+    <thead>
+      <tr class="row">
+        <th class="col">Name</th>
+        <th class="col">Email</th>
+        <th class="col">Address</th>
+        <th class="col">City</th>
+        <th class="col">Province or state</th>
+        <th class="col">Country</th>
+        <th class="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+     <% @insurance_providers.each do |insurer| %>
+     <tr class="row">
+      <td class="col"><%= insurer.name %></td>
+      <td class="col"><%= insurer.email %></td>
+      <td class="col"><%= insurer.address %></td>
+      <td class="col"><%= insurer.city %></td>
+      <td class="col"><%= insurer.province_or_state %></td>
+      <td class="col"><%= insurer.country %></td>
+      <td class="col"><%= link_to "View", insurer %></td>
+      <td class="col"><%= link_to "Edit", edit_insurance_provider_path(insurer) %></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%#= render insurance_provider %>
+
+</div>
+
+<%= link_to "Create new", new_insurance_provider_path %>

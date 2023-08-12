@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @insurance_provider %>
+
+<div class="row align-items-center">
+  <div class="col-auto">
+  <%= link_to "Edit", edit_insurance_provider_path(@insurance_provider), class: "button" %>
+  </div>
+  <div class="col">
+  <%= link_to "Back", insurance_providers_path %>
+  <div>
+
+  <div class="col" style="border: red 1px 2rem">
+  <%= button_to "Delete", @insurance_provider, method: :delete %>
+  <div>
+  <div>
+</div>
