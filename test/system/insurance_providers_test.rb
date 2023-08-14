@@ -15,7 +15,7 @@ class InsuranceProvidersTest < ApplicationSystemTestCase
     click_on "New insurance provider"
 
     fill_in "Address", with: @insurance_provider.address
-    fill_in "City", with: @insurance_provider.city
+    fill_in "Cit", with: @insurance_provider.city
     fill_in "Country", with: @insurance_provider.country
     fill_in "Email", with: @insurance_provider.email
     fill_in "Name", with: @insurance_provider.name

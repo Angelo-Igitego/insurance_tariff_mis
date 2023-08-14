@@ -1,0 +1,30 @@
+System design
+------------
+
+Purpose of the system: to provide a product management MIS for insurers
+
+User story:
+----------
+Insurance provider provide medical insurance to patients, sometimes through their employers.
+
+When the insured person receive medical services, their invoice need to be sent to insurers for reimbursement. 
+
+Insurers need a way of managing medical product price list, so that it automatically asigns product codes following a given algorithm, and so that it service providers (health facilities) can use it as a single source of truth for pricing medical products and items.
+
+Functional requirements: 
+-------------------------------------
+1. Ability for a user to authenticate, log out, edit profiles. Types of users: 
+	a. Insurance provider admin 
+	b. Service provider admin 
+
+2. Service provider admin should be able to create a new product. A product should have a name, unique_item_code, product_type, cost_amount, reimbursable_amount. There are 4 different types of medical products, and each has its own attributes: 
+	a. medical acts
+	b. laboratory tests
+	c. consumable
+	d. drug
+
+3. When a product is created, a unique item code should be automatically assigned, following a given algorithm. 
+
+4. Service provider admins should be able to go on the platform and search for a product, hence seeing its price, item code, and any comments
+
+
