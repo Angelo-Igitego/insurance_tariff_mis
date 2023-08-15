@@ -17,6 +17,9 @@ Functional requirements:
 	a. Insurance provider admin 
 	b. Service provider admin 
 
+1.b. Insurance provider should be able to create a new service provider in the system, also creating which users are associated to that service provider. A service provider has the following attributes: Facility_code, category, name, location, phone
+
+
 2. Service provider admin should be able to create a new product. A product should have a name, unique_item_code, product_type, cost_amount, reimbursable_amount. There are 4 different types of medical products, and each has its own attributes: 
 	a. medical acts
 	b. laboratory tests
@@ -25,6 +28,8 @@ Functional requirements:
 
 3. When a product is created, a unique item code should be automatically assigned, following a given algorithm. 
 
-4. Service provider admins should be able to go on the platform and search for a product, hence seeing its price, item code, and any comments
+4. Service providers should be able to create a tariff for their own insurance company, with the ability to update it. A tariff is comprised of: product_id, insurance_provider_id, amount, created_at, updated_at
+
+5. Service provider admins should be able to go on the platform and search for a product, hence seeing its price, item code, when it was uploaded in the system, when it was updated, and any comments
 
 

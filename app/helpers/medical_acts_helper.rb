@@ -1,0 +1,2 @@
+module MedicalActsHelper
+end

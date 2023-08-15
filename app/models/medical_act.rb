@@ -1,0 +1,2 @@
+class MedicalAct < ApplicationRecord
+end
