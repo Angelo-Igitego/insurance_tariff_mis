@@ -22,9 +22,9 @@ Functional requirements:
 
 2. Service provider admin should be able to create a new product. A product should have a name, unique_item_code, product_type, cost_amount, reimbursable_amount. There are 4 different types of medical products, and each has its own attributes: 
 	a. medical acts
-	b. laboratory tests
-	c. consumable
-	d. drug
+	b. laboratory tests (test_type, unit_of_measurement, min_ref_value, max_ref_value)
+	c. consumable (form unit_of_measurement comment)
+	d. drug (category form unit_of_measurement)
 
 3. When a product is created, a unique item code should be automatically assigned, following a given algorithm. 
 

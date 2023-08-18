@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  form: MyString
+  unit_of_measurement: MyString
+
+two:
+  category: MyString
+  form: MyString
+  unit_of_measurement: MyString

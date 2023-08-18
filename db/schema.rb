@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_15_081627) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_16_183657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "consumables", force: :cascade do |t|
+    t.string "form"
+    t.string "unit_of_measurement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drugs", force: :cascade do |t|
+    t.string "category"
+    t.string "form"
+    t.string "unit_of_measurement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "insurance_providers", force: :cascade do |t|
     t.string "name"
@@ -21,6 +36,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_15_081627) do
     t.string "city"
     t.string "province_or_state"
     t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lab_tests", force: :cascade do |t|
+    t.string "category"
+    t.string "unit_of_measurement"
+    t.decimal "min_ref_value"
+    t.decimal "max_ref_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @consumable %>
+
+<div>
+  <%= link_to "Edit this consumable", edit_consumable_path(@consumable) %> |
+  <%= link_to "Back to consumables", consumables_path %>
+
+  <%= button_to "Destroy this consumable", @consumable, method: :delete %>
+</div>

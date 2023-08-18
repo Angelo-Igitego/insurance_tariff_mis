@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :drugs
+  resources :consumables
+  resources :lab_tests
   resources :medical_acts
   resources :products
   resources :insurance_providers

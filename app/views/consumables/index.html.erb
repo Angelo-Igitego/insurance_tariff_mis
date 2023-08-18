@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Consumables</h1>
+
+<div id="consumables">
+  <% @consumables.each do |consumable| %>
+    <%= render consumable %>
+    <p>
+      <%= link_to "Show this consumable", consumable %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New consumable", new_consumable_path %>
