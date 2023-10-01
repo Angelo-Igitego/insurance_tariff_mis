@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  resources :drugs
-  resources :consumables
-  resources :lab_tests
-  resources :medical_acts
-  resources :products
-  resources :insurance_providers
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root "insurance_providers#index"
+  namespace :api do
+    namespace :v1, path: '/' do
+        resources :drugs
+        resources :consumables
+        resources :lab_tests
+        resources :medical_acts
+        resources :products
+        resources :insurance_providers
+    end
+  end
 end

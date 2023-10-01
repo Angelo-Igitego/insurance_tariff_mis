@@ -1,0 +1,41 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: insurance-tariff-database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    command: "postgres -c 'max_connections=500'"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - default
+  api:
+    build: .
+    entrypoint: "./docker/entrypoint.sh"
+    container_name: insurance-tariff-api
+    environment:
+      - RAILS_ENV=${RAILS_ENV}
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - .:/app
+      - app-storage:/rails/storage
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+
+volumes:
+  postgres_data: {}
+  app-storage: {}
+
+networks:
+  default:
+    # Use a custom driver
